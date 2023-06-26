@@ -11,10 +11,10 @@
  * Header, with the fields enclosed by brackets [] replaced by your own identifying
  * information: "Portions copyright [year] [name of copyright owner]".
  *
- * Copyright 2017-2022 ForgeRock AS.
+ * @author Stephane Orluc
  */
 
-package com.whispeak.whispeakAuthNode;
+package com.idnow.idnowAuthNode;
 
 import java.util.Collections;
 import java.util.Map;
@@ -53,7 +53,7 @@ import org.forgerock.openam.plugins.PluginException;
  * </p>
  * @since AM 5.5.0
  */
-public class whispeakAuthNodePlugin extends AbstractNodeAmPlugin {
+public class idnowAuthNodePlugin extends AbstractNodeAmPlugin {
 
 	static private String currentVersion = "0.0.0";
 	
@@ -65,8 +65,8 @@ public class whispeakAuthNodePlugin extends AbstractNodeAmPlugin {
      */
 	@Override
 	protected Map<String, Iterable<? extends Class<? extends Node>>> getNodesByVersion() {
-		return Collections.singletonMap(whispeakAuthNodePlugin.currentVersion, 
-				Collections.singletonList(whispeakAuthNode.class));
+		return Collections.singletonMap(idnowAuthNodePlugin.currentVersion, 
+				Collections.singletonList(idnowAuthNode.class));
 	}
 
     /** 
@@ -114,6 +114,6 @@ public class whispeakAuthNodePlugin extends AbstractNodeAmPlugin {
      */
 	@Override
 	public String getPluginVersion() {
-		return whispeakAuthNodePlugin.currentVersion;
+		return idnowAuthNodePlugin.currentVersion;
 	}
 }
